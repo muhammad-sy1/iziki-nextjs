@@ -1,0 +1,35 @@
+{
+  "HomePage": {
+    "title": "Hello world!"
+  },
+  "Header": {
+    "publishRide": "انشر رحلة",
+    "confirmTitle": "هل أنت متأكد تمامًا؟",
+    "confirmDesc": "هذا الإجراء لا يمكن التراجع عنه. سيؤدي إلى حذف حسابك نهائيًا وإزالة بياناتك من خوادمنا.",
+    "search": "بحث",
+    "searchDesc": "اضغط بحث عند الانتهاء.",
+    "searchPlaceholder": "اكتب أي شيء",
+    "cancel": "إلغاء",
+    "myAccount": "حسابي",
+    "profile": "الملف الشخصي",
+    "billing": "الفواتير",
+    "team": "الفريق",
+    "subscription": "الاشتراك"
+  },
+  "Footer": {
+    "title": "كيف تسافر مع IZIKEZ",
+    "description": "خدمة مشاركة السيارات مع شروط مريحة للركاب",
+    "help": {
+      "title": "المساعدة",
+      "faq": "الأسئلة الشائعة",
+      "center": "مركز المساعدة",
+      "privacy": "سياسة الخصوصية"
+    },
+    "reservations": {
+      "title": "الحجوزات",
+      "publish": "نشر رحلة",
+      "find": "البحث عن رحلة"
+    },
+    "rights": "© 2025 IZIKIZ جميع الحقوق محفوظة - تم التطوير بواسطة Webchallenge"
+  }
+}

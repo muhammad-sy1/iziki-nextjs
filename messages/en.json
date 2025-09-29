@@ -1,0 +1,115 @@
+{
+  "HomePage": {
+    "banner": {
+      "title": "Travel smart and save more",
+      "subtitle": "Find trusted drivers and enjoy affordable rides.",
+      "from": "From",
+      "to": "To",
+      "today": "Today",
+      "tomorrow": "Tomorrow",
+      "afterTomorrow": "After Tomorrow",
+      "passengers": "1 Passenger",
+      "passengers_plural": "{{count}} Passengers",
+      "search": "Search"
+    },
+    "services": {
+      "title": "Our Services",
+      "cheapTrips": "Choose from cheap trips",
+      "cheapTripsBody": "We check reviews and profiles so you know who you are traveling with and can easily book your trip on our site.",
+      "trustPeople": "Trust the person you travel with",
+      "trustPeopleBody": "We check reviews and profiles so you know who you are traveling with and can easily book your trip on our site.",
+      "bookFast": "Book quickly and easily",
+      "bookFastBody": "We check reviews and profiles so you know who you are traveling with and can easily book your trip on our site."
+    },
+    "trips": {
+      "latest": "Latest Trips",
+      "price": "Price",
+      "quantity": "Seats available",
+      "bookTrip": "Book this trip"
+    },
+    "contact": {
+      "title": "Contact Us"
+    },
+    "form": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "title": "Enter Your Details",
+      "title-create": "Enter Your Details",
+      "name": "Full Name",
+      "email": "Email",
+      "phone": "Phone",
+      "password": "Password",
+      "confirmPassword": "Confirm Password",
+      "message": "Tell us a little bit about yourself",
+      "submit": "Submit",
+      "create": "Create Account",
+      "forgetPassword": "Forget Password?",
+      "toastTitle": "You submitted the following values",
+      "usernameError": "Username must be at least 2 characters.",
+      "emailError": "Invalid email address.",
+      "phoneError": "Phone number must contain only digits.",
+      "messageMinError": "Message must be at least 10 characters.",
+      "messageMaxError": "Message must not be longer than 160 characters.",
+      "passwordUpperError": "Password must contain at least one uppercase letter.",
+      "passwordNumberError": "Password must contain at least one number.",
+      "passwordSpecialError": "Password must contain at least one special character."
+    }
+  },
+  "Header": {
+    "publishRide": "Publish a ride",
+    "confirmTitle": "Are you absolutely sure?",
+    "confirmDesc": "This action cannot be undone. This will permanently delete your account and remove your data from our servers.",
+    "search": "Search",
+    "searchDesc": "Click search when you're done.",
+    "searchPlaceholder": "Type anything",
+    "cancel": "Cancel",
+    "myAccount": "My Account",
+    "profile": "Profile",
+    "billing": "Billing",
+    "team": "Team",
+    "subscription": "Subscription"
+  },
+  "Footer": {
+    "title": "How to travel with IZIKEZ",
+    "description": "Carpooling with comfortable conditions for passengers",
+    "help": {
+      "title": "Help",
+      "faq": "FAQ",
+      "center": "Help Center",
+      "privacy": "Privacy Policy"
+    },
+    "reservations": {
+      "title": "Reservations",
+      "publish": "Publish a trip",
+      "find": "Find a trip"
+    },
+    "rights": "© 2025 IZIKIZ all rights reserved - Developed by Webchallenge"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "form": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "title": "Enter Your Details",
+      "title-create": "Enter Your Details",
+      "name": "Full Name",
+      "email": "Email",
+      "phone": "Phone",
+      "password": "Password",
+      "confirmPassword": "Confirm Password",
+      "message": "Tell us a little bit about yourself",
+      "submit": "Submit",
+      "create": "Create Account",
+      "forgetPassword": "Forget Password?",
+      "toastTitle": "You submitted the following values",
+      "usernameError": "Username must be at least 2 characters.",
+      "emailError": "Invalid email address.",
+      "phoneError": "Phone number must contain only digits.",
+      "messageMinError": "Message must be at least 10 characters.",
+      "messageMaxError": "Message must not be longer than 160 characters.",
+      "passwordUpperError": "Password must contain at least one uppercase letter.",
+      "passwordNumberError": "Password must contain at least one number.",
+      "passwordSpecialError": "Password must contain at least one special character."
+    }
+  }
+}

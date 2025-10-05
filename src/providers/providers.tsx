@@ -1,11 +1,26 @@
-// app/providers.tsx
 "use client";
 
-import "@/lib/i18n"; // تفعيل الإعدادات
-import { ReactNode } from "react";
-import { I18nextProvider } from "react-i18next";
-import i18n from "@/lib/i18n";
+import { ReactNode, useState } from "react";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { NextIntlClientProvider } from "next-intl";
+import type { AbstractIntlMessages } from "next-intl";
 
-export default function Providers({ children }: { children: ReactNode }) {
-  return <I18nextProvider i18n={i18n}>{children}</I18nextProvider>;
+export default function Providers({
+  children,
+  locale,
+  messages,
+}: {
+  children: ReactNode;
+  locale: string;
+  messages: AbstractIntlMessages;
+}) {
+  const [queryClient] = useState(() => new QueryClient());
+
+  return (
+    <QueryClientProvider client={queryClient}>
+      <NextIntlClientProvider locale={locale} messages={messages}>
+        {children}
+      </NextIntlClientProvider>
+    </QueryClientProvider>
+  );
 }

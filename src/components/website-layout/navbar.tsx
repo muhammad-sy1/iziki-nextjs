@@ -27,17 +27,29 @@ import { FaUserCircle } from "react-icons/fa";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import Image from "next/image";
 import Link from "next/link";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
+import LanguageSwitcher from "../global/LanguageSwitcher";
+// import { useRouter } from "@/i18n/navigation";
+import { getCookie } from "@/lib/cookies/cookiesMethods";
+import { useState } from "react";
+import { toast } from "sonner";
+// import { useEffect } from "react";
 
 export default function Navbar() {
+  const locale = useLocale();
   const t = useTranslations("Header");
-  const token = "founded"
-  // localStorage.getItem("token");
+  // const token = getCookie("token");
+  const [token, setToken] = useState(getCookie("token"));
 
+  // useEffect(() => {
+  //   setCookie("tokenWE", "thing", 7);
+  // }, []);
+  // localStorage.getItem("token");
+  // const router = useRouter();
   return (
     <header>
       <nav className="sm:max-w-[95%] absolute mx-auto z-50 top-10 inset-x-0 ">
-        <div className="px-2 bg-gradient-to-r from-blue-950 from-5% via-green-700 via-20% to-gray-100 dark:to-black/50 to-90% h-16 rounded-xl">
+        <div className="px-2 bg-gradient-to-r from-blue-950 from-5% to-green-700 dark:to-black/50 to-90% h-16 rounded-xl">
           <div className="flex justify-between items-center h-full">
             {/* Logo */}
             <div className="h-full flex justify-center items-center p-3">
@@ -52,10 +64,12 @@ export default function Navbar() {
 
             {/* Right side buttons */}
             <div className="flex items-center gap-x-4">
+              <LanguageSwitcher />
+
               {/* Publish Ride */}
               <Dialog>
                 <DialogTrigger className="">
-                  <div className="flex items-center gap-x-2 transition-colors text-muted-foreground hover:text-foreground">
+                  <div className="flex items-center gap-x-2 transition-colors text-gray-100 hover:text-gray-200">
                     <SlPlus className="text-2xl" />
                     <span className="font-bold text-xl sm:flex hidden">
                       {t("publishRide")}
@@ -74,7 +88,7 @@ export default function Navbar() {
               <Dialog>
                 <form>
                   <DialogTrigger asChild>
-                    <div className="cursor-pointer transition-colors text-muted-foreground hover:text-foreground">
+                    <div className="cursor-pointer transition-colors text-gray-100 hover:text-gray-200">
                       <IoIosSearch className="text-3xl" />
                     </div>
                   </DialogTrigger>
@@ -105,7 +119,7 @@ export default function Navbar() {
               {/* Dropdown Menu */}
               <DropdownMenu>
                 <DropdownMenuTrigger>
-                  <span className="flex items-center gap-x-1 text-2xl transition-colors text-muted-foreground hover:text-foreground">
+                  <span className="flex items-center gap-x-1 text-2xl transition-colors text-gray-100 hover:text-gray-200">
                     <FaUserCircle />
                     <MdKeyboardArrowDown />
                   </span>
@@ -118,16 +132,27 @@ export default function Navbar() {
                   <DropdownMenuItem>{t("team")}</DropdownMenuItem>
                   {!token && (
                     <DropdownMenuItem>
-                      <Link className="flex w-full" href="/log-in">
-                        Login
-                      </Link>
+                      <Link href={`/${locale}/login`}>login</Link>
                     </DropdownMenuItem>
                   )}
                   {!token && (
                     <DropdownMenuItem>
-                      <Link className="flex w-full" href="/sign-up">
-                        Sign Up
-                      </Link>
+                      <Link href={`/${locale}/signup`}>Sign Up</Link>
+                    </DropdownMenuItem>
+                  )}
+                  {token && (
+                    <DropdownMenuItem>
+                      {/* <Link href={`/${locale}/signup`}> */}
+                      <div
+                        className="cursor-pointer"
+                        onClick={() => {
+                          setToken(null);
+                          toast("log out successfully");
+                        }}
+                      >
+                        Logout
+                      </div>
+                      {/* </Link> */}
                     </DropdownMenuItem>
                   )}
                 </DropdownMenuContent>

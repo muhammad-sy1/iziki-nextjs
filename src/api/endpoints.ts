@@ -3,9 +3,9 @@ const imgBaseURL = "https://ditake-back.bayanmasters.com/storage/";
 
 const endpoints = {
   logIn: "app/auth/login",
-  signUp: "app/auth/register",
+  verificationCode: "app/auth/send/verification-code",
+  register: "app/auth/register",
   checkCode: "app/auth/check/verification",
-  sendVerifyCode: "app/auth/send/verification-code",
   resetPassword: "app/auth/reset-password",
   logout: "app/auth/logout",
   home: "app/home",

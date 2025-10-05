@@ -7,6 +7,7 @@ import { BsMoonStars } from "react-icons/bs";
 import { HiOutlineDesktopComputer } from "react-icons/hi";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+// import LanguageSwitcher from "../global/changeLang";
 // import LanguageSelect from "./components/LanguageSelect";
 // import { useTranslation } from "react-i18next";
 // import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
@@ -123,6 +124,7 @@ const Footer = () => {
 
                 {/* Language Select */}
                 {/* <LanguageSelect /> */}
+                {/* <LanguageSwitcher /> */}
               </div>
             </div>
             <div className="col-span-6">
